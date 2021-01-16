@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from './components/Header';
 import TextDisplay from './components/TextDisplay';
+import Chart from './components/Chart';
+import DisplayChart from './components/DisplayChart';
 
 import './App.css';
 
@@ -23,6 +25,7 @@ function App() {
     <div className="App">
       <Header handleFileChosen={handleFileChosen}/>
       <TextDisplay text={text}/>
+      <DisplayChart/>
     </div>
   );
 }
