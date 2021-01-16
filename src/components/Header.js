@@ -1,4 +1,5 @@
 import React from 'react';
+import SubmitFile from './SubmitFile';
 import {AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
 
 
@@ -14,7 +15,7 @@ const useStyles = makeStyles(() => ({
   }));
 
 
-function Header() {
+function Header({handleFileChosen}) {
     const classes = useStyles();
     return(
         <div className={classes.root}>
@@ -23,6 +24,7 @@ function Header() {
                     <Typography className={classes.title}>
                         Header
                     </Typography>
+                    <SubmitFile handleFileChosen={handleFileChosen}/>
                 </Toolbar>
             </AppBar>
         </div>
