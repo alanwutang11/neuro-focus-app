@@ -18,17 +18,16 @@ const useStyles = makeStyles(() => ({
 
 }));
 
-function TextDisplay() {
+function TextDisplay({text}) {
   const classes = useStyles();
-  const [text, settext] = useState([]);
 
-  useEffect(() => {
-    fetch(raw)
-      .then((r) => r.text())
-      .then((text) => {
-        settext(text);
-      });
-  });
+//   useEffect(() => {
+//     fetch(raw)
+//       .then((r) => r.text())
+//       .then((text) => {
+//         settext(text);
+//       });
+//   });
 
   return (
     <div className={classes.root}>
