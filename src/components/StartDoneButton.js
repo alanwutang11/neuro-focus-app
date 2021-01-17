@@ -4,10 +4,10 @@ import {Button, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
     root: {
-      flexGrow: 1,  
+      // flexGrow: 1,  
     },
     title: {
-        flexGrow: 1
+        // flexGrow: 1
     },
     startBttn: {
         color: '#00c853',
@@ -18,17 +18,17 @@ const useStyles = makeStyles(() => ({
         color: '#d50000',
         borderColor: '#d50000'
     }
-   
+
   }));
 
-  
+
 
 
 function StartDoneButton({handleClickStart, handleClickDone, start}) {
     const classes = useStyles();
-    
 
-   
+
+
     return(
         <div className={classes.root}>
             {start ? <Button className={classes.startBttn} onClick={handleClickStart} variant="outlined" component="span" size="large">
