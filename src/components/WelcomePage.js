@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
       marginTop: '-5vh',
       display: 'flex',
       justifyContent: 'center',
-      alignContent: 'flex-start',
+      alignContent: 'center',
       flexDirection: 'column'
     },
     submitButton: {

@@ -28,18 +28,14 @@ function App() {
     fileReader.readAsText(file);
   };
 
-  
+
 
   return (
     <div className="App">
 
       {textLoaded ? null : <WelcomePage handleFileChosen={handleFileChosen}/>}
       {textLoaded ? (<TextPage text={text}/>) : null}
-      
-    
-      
 
-      
     </div>
   );
 }
