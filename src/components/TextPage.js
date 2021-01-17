@@ -6,19 +6,24 @@ import StartDoneButton from "./StartDoneButton";
 
 
 
-//put the states in here. Then, once the stop button is clicked and the data is retreived, then use hoooks to set the state and send those 
-//props to the chart. 
+//put the states in here. Then, once the stop button is clicked and the data is retreived, then use hoooks to set the state and send those
+//props to the chart.
 
 
 
 
 const useStyles = makeStyles(() => ({
     root: {
-      flexGrow: 1,  
+      height: '100vh',
+      marginTop: '-5vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column'
     },
-    
-    
-   
+
+
+
   }));
 
 
