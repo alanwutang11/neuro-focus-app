@@ -26,7 +26,7 @@ function SubmitFile({handleFileChosen}) {
         onChange={(e) => handleFileChosen(e.target.files[0])}
       />
       <label htmlFor="contained-button-file">
-        <Button variant="contained" color="secondary" component="span" startIcon={<AddIcon/>}>
+        <Button variant="outlined" color="secondary" component="span" size="large" startIcon={<AddIcon/>}>
           Submit File
         </Button>
       </label>

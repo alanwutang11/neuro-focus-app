@@ -8,13 +8,13 @@ import {
 } from "@material-ui/core";
 import raw from "../data/sample-text.txt";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-//   cardStyle: {
-//       maxWidth: 
-//   }
+  // cardStyle: {
+   
+  // }
 
 }));
 
