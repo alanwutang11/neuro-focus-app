@@ -15,13 +15,15 @@ const useStyles = makeStyles(() => ({
     submitButton: {
     },
     cardStyle: {
-      marginBottom: '30px'
+      marginBottom: '30px',
+      boxShadow: 'none'
     },
     offBlack: {
       color: '#333'
     },
     space: {
-      letterSpacing: '2px'
+      letterSpacing: '2px',
+      paddingBottom: '5px'
     }
   }));
 
