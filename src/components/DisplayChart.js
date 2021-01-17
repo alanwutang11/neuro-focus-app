@@ -6,20 +6,20 @@ import Chart from './Chart';
     constructor() {
       super();
       this.state = {
-        clicked: false
+        doneClicked: false
       };
       this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-      this.setState({clicked: true});
+      this.setState({doneClicked: true});
     }
 
     render() {
       return (
         <div>
-          <Button onClick={this.handleClick} variant="contained" color="primary">View Results</Button>
-          {this.state.clicked ? <Chart/> : null}
+          <Button onClick={this.handleClick} variant="outlined" color="secondary">View Results</Button>
+          {this.state.doneClicked ? <Chart vals={this.props.vals}/> : null}
         </div>
       );
     }
