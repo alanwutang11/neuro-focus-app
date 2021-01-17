@@ -18,28 +18,23 @@ def get_current_time():
 def home():
     return "nothing here"
 
-@app.route('/start') 
+@app.route('/start')
 def startRecord():
     return MuseStream.startRecording()
 
-@app.route('/done')
+@app.route('/done', methods = ['GET'])
 def stopRecording():
     return MuseStream.stopRecording()
 
 
 """ @app.route('/record', methods=['POST','GET'])
 def MuseRecording():
-
-
     # http://127.0.0.1:5000/record
     if request.method == 'POST':
         # RUN RECORDING FUNCTION HERE
-
         return MuseStream.startRecording()
-
     if request.method == 'GET':
         # STOP RECORDING, RETURN JSONIFIED DATA
         return MuseStream.stopRecording()
-
     else:
         return "Method Not Allowed"  """

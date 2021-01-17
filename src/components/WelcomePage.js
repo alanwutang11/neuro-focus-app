@@ -6,7 +6,7 @@ import SubmitFile from './SubmitFile';
 const useStyles = makeStyles(() => ({
     root: {
       height: '100vh',
-      marginTop: '-10vh',
+      marginTop: '-5vh',
       display: 'flex',
       justifyContent: 'center',
       alignContent: 'flex-start',
@@ -35,7 +35,7 @@ function WelcomePage({handleFileChosen}) {
                 <Typography variant="h6" className={classes.offBlack, classes.space}>
                     WELCOME TO NEURO FOCUS
                 </Typography>
-                <Typography variant="h2" className={classes.offBlack}>
+                <Typography variant="h4" className={classes.offBlack}>
                     Select a file for upload
                 </Typography>
             </Card>

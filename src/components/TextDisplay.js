@@ -16,12 +16,15 @@ import StartDoneButton from "./StartDoneButton";
 //once the user hasa pressed stop, make the view results button available and then display the graph 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+  cardStyle: {
+    width: '550px',
+    boxShadow: 'none',
+    marginBottom: '10px'
   },
-  // cardStyle: {
-   
-  // }
+  textStyle: {
+    color: '#333',
+    textAlign: 'left',
+  }
 
 }));
 
@@ -38,7 +41,7 @@ function TextDisplay({text}) {
 //   });
 
   return (
-    <div className={classes.root}>
+    <div>
       <Card className={classes.cardStyle}>
         <CardContent>
           <Typography>{text}</Typography>
