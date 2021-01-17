@@ -5,6 +5,7 @@ import Chart from "./components/Chart";
 import SubmitFile from "./components/SubmitFile";
 import DisplayChart from "./components/DisplayChart";
 import WelcomePage from "./components/WelcomePage";
+import TextPage from "./components/TextPage";
 import { Paper } from "@material-ui/core";
 
 
@@ -37,13 +38,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header handleFileChosen={handleFileChosen} />
-      {textLoaded ? null : <SubmitFile handleFileChosen={handleFileChosen} />}
 
+      {textLoaded ? null : <WelcomePage handleFileChosen={handleFileChosen}/>}
       {textLoaded ? (
-        <Paper className="textDisplay" elevation={0}>
-          <TextDisplay className="textDisplay" text={text} />
-        </Paper>  
+        <TextPage text={text}/>
       ) : null}
       
       {textLoaded ? <DisplayChart/> : null}

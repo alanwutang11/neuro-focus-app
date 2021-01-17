@@ -7,7 +7,12 @@ import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
-    
+    primary: {
+      main: "#f48fb1"
+    },
+    secondary: {
+      main: '#ce93d8'
+    }
     
   }
 
@@ -15,7 +20,7 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
   </React.StrictMode>,
