@@ -60,6 +60,7 @@ class MuseStream:
         self.baseline = BCI.calc_baseline(feat_matrix_baseline)
 
     def startRecording(self):
+        print("Recording")
         self.recording = True
         try:
             while (self.recording == True):
@@ -110,6 +111,6 @@ class MuseStream:
             if (percent_change[x] < lower_bound):
                 percent_change[x] = np.median(percent_change)
         # return percent_change
-        #data = self.processEEG(self.eeg_raw)
-
+        # data = self.processEEG(self.eeg_raw)
+        self.eeg_raw = np.ndarray(shape = (8,4))
         return jsonify(percent_change)
