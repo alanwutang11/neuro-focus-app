@@ -7,6 +7,13 @@ import {
   CardContent,
 } from "@material-ui/core";
 import raw from "../data/sample-text.txt";
+import StartDoneButton from "./StartDoneButton";
+
+
+//once the start button is clicked, then possibly have the border of the text display turn 
+//green or indicate "running" until the user presses stop
+
+//once the user hasa pressed stop, make the view results button available and then display the graph 
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 function TextDisplay({text}) {
   const classes = useStyles();
+
 
 //   useEffect(() => {
 //     fetch(raw)

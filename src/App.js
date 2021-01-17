@@ -28,23 +28,15 @@ function App() {
     fileReader.readAsText(file);
   };
 
-  useEffect(() => {
-    fetch('/api').then(response => {
-      if (response.ok){
-        return response.json()
-      }
-    }).then(data => console.log(data))
-  }, [])
+  
 
   return (
     <div className="App">
 
       {textLoaded ? null : <WelcomePage handleFileChosen={handleFileChosen}/>}
-      {textLoaded ? (
-        <TextPage text={text}/>
-      ) : null}
+      {textLoaded ? (<TextPage text={text}/>) : null}
       
-      {textLoaded ? <DisplayChart/> : null}
+    
       
 
       

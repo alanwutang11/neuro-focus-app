@@ -3,11 +3,12 @@ import {makeStyles} from '@material-ui/core';
 import {Line} from 'react-chartjs-2';
 
 
+
 const useStyles = makeStyles(() => ({
     root: {
       flexGrow: 1,
     },
-
+   
   }));
 
 const state = {
@@ -15,6 +16,7 @@ const state = {
     name: 'Attention',
     data: [10, 50, 70]
   }] */
+  
   labels: ['one', 'two', 'three', 'four', 'five'],
   datasets: [
     {
@@ -22,9 +24,10 @@ const state = {
       borderColor: 'black',
       borderWidth: 7,
       fill: true,
-      data: [1, 3, 2, 5, 4]
+      //data: [1, 3, 2, 5, 4] //put the vals here?
     }
   ]
+  
 }
 
 const options = {
@@ -43,8 +46,9 @@ const options = {
   }
 }
 
+//vals is the variable that has all the data values 
 
-function Chart() {
+function Chart({vals}) {
     const classes = useStyles();
     return(
         <div id="chart">
@@ -52,6 +56,7 @@ function Chart() {
             data={state}
             options={options}
           />
+          <h9>{vals}</h9> 
         </div>
     );
 }
