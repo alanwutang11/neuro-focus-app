@@ -15,7 +15,7 @@ class MuseStream:
     EPOCH_LENGTH    = 1
     OVERLAP_LENGTH  = 0.8
     SHIFT_LENGTH    = EPOCH_LENGTH - OVERLAP_LENGTH
-    TRAINING_LENGTH = 1
+    TRAINING_LENGTH = 30
     INDEX_CHANNEL   = [0, 1 , 2, 3] # use all four electrodes
     N_CHANNELS      = 4
 
@@ -49,6 +49,7 @@ class MuseStream:
                                     self.freq,
                                     self.INDEX_CHANNEL,
                                     True, )
+                                    
         eeg_epochs_baseline = BCI.epoch_array(
                                     eeg_data_baseline,
                                     self.EPOCH_LENGTH,

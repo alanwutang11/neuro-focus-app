@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import raw from "../data/sample-text.txt";
 import StartDoneButton from "./StartDoneButton";
+import DisplayChart from "./DisplayChart";
 
 
 //once the start button is clicked, then possibly have the border of the text display turn
@@ -47,6 +48,7 @@ function TextDisplay({text}) {
           <Typography className={classes.textStyle}>{text}</Typography>
         </CardContent>
       </Card>
+    
     </div>
   );
 }

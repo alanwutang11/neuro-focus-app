@@ -1,28 +1,34 @@
-import React from 'react';
-import { Button } from "@material-ui/core";
+import React, {useEffect, useState} from 'react';
+import { Button, makeStyles} from "@material-ui/core";
 import Chart from './Chart';
+import ResultsPage from './ResultsPage';
 
-  class DisplayChart extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        doneClicked: false
-      };
-      this.handleClick = this.handleClick.bind(this);
-    }
+const useStyles = makeStyles(() => ({
+  // root: {
+  //   // flexGrow: 1,
+  // },
+ 
+}));
 
-    handleClick() {
-      this.setState({doneClicked: true});
-    }
+function DisplayChart({setResults, vals}) {
+    const classes = useStyles();
+    const [doneClicked, setDoneClicked] = useState(false);
 
-    render() {
-      return (
+    const handleClick = () => {
+      setDoneClicked(true);
+      setResults(true);
+      console.log("handleclick")
+    };
+  
+    
+    return(
         <div>
-          <Button onClick={this.handleClick} variant="outlined" color="secondary">View Results</Button>
-          {this.state.doneClicked ? <Chart vals={this.props.vals}/> : null}
+          <Button onClick={handleClick} variant="outlined" color="secondary">View Results</Button>
+          {doneClicked ? <ResultsPage vals={vals}/> : null}
+
         </div>
-      );
-    }
-  };
+    );
+}
 
 export default DisplayChart
+
