@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, makeStyles, Typography} from "@material-ui/core";
 import TextDisplay from "./TextDisplay";
+import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -13,8 +14,6 @@ const useStyles = makeStyles(() => ({
 
 function SubmitFile({handleFileChosen}) {
 
-  const [text, settext] = useState([]);
-  
   const classes = useStyles();
 
   return (
@@ -27,7 +26,7 @@ function SubmitFile({handleFileChosen}) {
         onChange={(e) => handleFileChosen(e.target.files[0])}
       />
       <label htmlFor="contained-button-file">
-        <Button variant="contained" color="secondary" component="span">
+        <Button variant="contained" color="secondary" component="span" startIcon={<AddIcon/>}>
           Submit File
         </Button>
       </label>

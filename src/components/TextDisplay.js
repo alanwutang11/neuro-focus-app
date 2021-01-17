@@ -12,9 +12,9 @@ const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
   },
-  cardStyle: {
-      maxWidth: 600
-  }
+//   cardStyle: {
+//       maxWidth: 
+//   }
 
 }));
 
