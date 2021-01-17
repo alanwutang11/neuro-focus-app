@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Button, makeStyles } from '@material-ui/core';
+import LinearProgress from "./LinearProgress"
 
 
 const useStyles = makeStyles(() => ({
@@ -36,6 +37,7 @@ function StartDoneButton({handleClickStart, handleClickDone, start}) {
             </Button> : <Button className={classes.stopBttn} onClick={handleClickDone} variant="outlined" component="span" size="large">
                 Stop
             </Button>}
+            
         </div>
 
     );
