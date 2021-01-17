@@ -35,7 +35,7 @@ function TextPage({text}) {
 
     const handleClickStart = () => {
         setstart(false);
-        fetch('/api/start')
+        fetch('/start')
     }
 
     const handleClickDone = () => {
@@ -50,7 +50,16 @@ function TextPage({text}) {
     return(
         <div className={classes.root}>
           <TextDisplay text={text} />
-          {done ? <DisplayChart vals={vals}/> : <StartDoneButton handleClickStart={handleClickStart} handleClickDone={handleClickDone} start={start}/>}
+          {start ? null : <TextDisplay text={text} />}
+        {done ? (
+          <DisplayChart vals={vals} />
+        ) : (
+          <StartDoneButton
+            handleClickStart={handleClickStart}
+            handleClickDone={handleClickDone}
+            start={start}
+          />
+        )}
         </div>
 
     );
