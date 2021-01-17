@@ -18,7 +18,7 @@ import Chart from './Chart';
     render() {
       return (
         <div>
-          <Button onClick={this.handleClick} variant="contained" color="primary">Click this</Button>
+          <Button onClick={this.handleClick} variant="contained" color="primary">View Results</Button>
           {this.state.clicked ? <Chart/> : null}
         </div>
       );
