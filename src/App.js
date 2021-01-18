@@ -19,8 +19,8 @@ function App() {
 
   const [vals, setvals] = useState([]);
   const [done, setdone] = useState(false);
-  
-  
+
+
 
   //set text loaded to false
 
@@ -40,7 +40,7 @@ function App() {
     console.log("val", val)
     setShowResults(val);
     console.log(showResults)
-    
+
   };
 
   const handleClickDone = () => {
@@ -61,10 +61,10 @@ function App() {
   //   }
   // });
 
-  
 
 
-  
+
+
 
 
 
@@ -74,8 +74,8 @@ function App() {
 
       {showResults ? <ResultsPage vals={vals}/> : null}
       {textLoaded && !showResults ? null : <WelcomePage handleFileChosen={handleFileChosen}/>}
-      {textLoaded && !showResults ? (<TextPage text={text} setResults={setResults} handleClickDone={handleClickDone} done={done}/>) : null} 
-      
+      {textLoaded && !showResults ? (<TextPage text={text} setResults={setResults} handleClickDone={handleClickDone} done={done}/>) : null}
+
     </div>
   );
 }

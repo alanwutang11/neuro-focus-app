@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     },
     leftSide: {
     },
-    rightSideL: {
+    rightSide: {
 
     },
     cardStyle: {
@@ -35,10 +35,10 @@ function ResultsPage({vals}) {
     return(
         <div className={classes.root}>
           {/* questions and right/wrong answers */}
-          
+
             <Chart vals={vals}/>
             <Button variant="outlined" color="secondary">Email my results</Button>
-         
+
         </div>
 
     );
